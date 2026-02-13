@@ -4,8 +4,9 @@ defmodule DdexDeliveryService.Export.Csv do
   Generates RFC 4180 compliant CSV output as iodata.
   """
 
+  require Ash.Query
+
   alias DdexDeliveryService.Ingestion
-  alias DdexDeliveryService.Catalog
 
   @track_headers [
     "release_title",
@@ -137,15 +138,10 @@ defmodule DdexDeliveryService.Export.Csv do
   # --- Data loading ---
 
   defp load_releases_with_tracks(delivery, actor, org_id) do
-    case Catalog.list_releases(
-           actor: actor,
-           tenant: org_id,
-           filter: [delivery_id: delivery.id],
-           load: [:artists, :label, :deals, :territory_releases, tracks: [:artists]]
-         ) do
-      {:ok, releases} -> {:ok, releases}
-      error -> error
-    end
+    DdexDeliveryService.Catalog.Release
+    |> Ash.Query.filter(delivery_id == ^delivery.id)
+    |> Ash.Query.load([:artists, :label, :deals, :territory_releases, tracks: [:artists]])
+    |> Ash.read(actor: actor, tenant: org_id)
   end
 
   # --- CSV encoding (RFC 4180) ---
