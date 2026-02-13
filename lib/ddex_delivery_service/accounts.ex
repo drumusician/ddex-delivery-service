@@ -24,5 +24,20 @@ defmodule DdexDeliveryService.Accounts do
       define :destroy_api_key, action: :destroy
       define :lookup_api_key_by_hash, action: :lookup_by_hash, args: [:key_hash]
     end
+
+    resource DdexDeliveryService.Accounts.SftpKey do
+      define :create_sftp_key, action: :create
+      define :list_sftp_keys, action: :read
+      define :list_active_sftp_keys, action: :active_keys
+      define :get_sftp_key_by_fingerprint, action: :by_fingerprint, args: [:fingerprint]
+      define :update_sftp_key, action: :update
+      define :destroy_sftp_key, action: :destroy
+    end
+
+    resource DdexDeliveryService.Accounts.Connection do
+      define :create_connection, action: :create
+      define :list_connections, action: :read
+      define :get_connection_by_id, action: :read, get_by: [:id]
+    end
   end
 end

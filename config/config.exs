@@ -17,8 +17,16 @@ config :ddex_delivery_service, Oban,
   plugins: [{Oban.Plugins.Cron, []}]
 
 config :mime,
-  extensions: %{"json" => "application/vnd.api+json"},
-  types: %{"application/vnd.api+json" => ["json"]}
+  extensions: %{
+    "json" => "application/vnd.api+json",
+    "flac" => "audio/flac",
+    "aac" => "audio/aac"
+  },
+  types: %{
+    "application/vnd.api+json" => ["json"],
+    "audio/flac" => ["flac"],
+    "audio/aac" => ["aac"]
+  }
 
 config :ash_json_api,
   show_public_calculations_when_loaded?: false,
@@ -84,6 +92,13 @@ config :ddex_delivery_service,
   generators: [timestamp_type: :utc_datetime],
   ash_domains: [DdexDeliveryService.Accounts, DdexDeliveryService.Catalog, DdexDeliveryService.Ingestion],
   ash_authentication: [return_error_on_invalid_magic_link_token?: true]
+
+# Configure SFTP server
+config :ddex_delivery_service, :sftp,
+  enabled: true,
+  port: 2222,
+  upload_root: "priv/sftp/uploads",
+  host_key_dir: "priv/sftp"
 
 # Configure the endpoint
 config :ddex_delivery_service, DdexDeliveryServiceWeb.Endpoint,

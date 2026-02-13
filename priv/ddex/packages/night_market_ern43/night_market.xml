@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ern:NewReleaseMessage xmlns:ern="http://ddex.net/xml/ern/43" MessageSchemaVersionId="ern/43">
+  <MessageHeader>
+    <MessageThreadId>MSG-2025-145</MessageThreadId>
+    <MessageId>MSG-2025-145-001</MessageId>
+    <MessageSender>
+      <PartyId>PADPIDA2025060101P</PartyId>
+      <PartyName>
+        <FullName>Phosphor Records</FullName>
+      </PartyName>
+    </MessageSender>
+    <MessageRecipient>
+      <PartyId>PADPIDA2024010102B</PartyId>
+      <PartyName>
+        <FullName>DDEX Delivery Service</FullName>
+      </PartyName>
+    </MessageRecipient>
+    <MessageCreatedDateTime>2025-06-01T11:00:00Z</MessageCreatedDateTime>
+  </MessageHeader>
+
+  <PartyList>
+    <Party>
+      <PartyReference>P1</PartyReference>
+      <PartyName>
+        <FullName>DJ Sable</FullName>
+      </PartyName>
+      <PartyId>
+        <ISNI>0000000467891234</ISNI>
+      </PartyId>
+    </Party>
+    <Party>
+      <PartyReference>P2</PartyReference>
+      <PartyName>
+        <FullName>Kira</FullName>
+      </PartyName>
+      <PartyId>
+        <ISNI>0000000534567890</ISNI>
+      </PartyId>
+    </Party>
+    <Party>
+      <PartyReference>P3</PartyReference>
+      <PartyName>
+        <FullName>Phosphor Records</FullName>
+      </PartyName>
+      <PartyId>
+        <DPID>PADPIDA2025060101P</DPID>
+      </PartyId>
+    </Party>
+  </PartyList>
+
+  <ResourceList>
+    <!-- Track 1: Night Market -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>FRZ0425000201</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A1</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Night Market</TitleText>
+      </ReferenceTitle>
+      <Duration>PT5M32S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>DJ Sable</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>DJ Sable</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Phosphor Records</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Phosphor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>House</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T1</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>24</BitsPerSample>
+        <Duration>PT5M32S</Duration>
+        <File>
+          <FileName>FRZ0425000201.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>aa11bb22cc33dd44ee55ff66aa11bb22cc33dd44ee55ff66aa11bb22cc33dd44</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 2: Jade Lantern -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>FRZ0425000202</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A2</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Jade Lantern</TitleText>
+      </ReferenceTitle>
+      <Duration>PT4M48S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>DJ Sable</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>DJ Sable</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Phosphor Records</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Phosphor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Deep House</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T2</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>24</BitsPerSample>
+        <Duration>PT4M48S</Duration>
+        <File>
+          <FileName>FRZ0425000202.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>bb22cc33dd44ee55ff66aa11bb22cc33dd44ee55ff66aa11bb22cc33dd44ee55</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 3: Silk Road -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>FRZ0425000203</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A3</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Silk Road</TitleText>
+      </ReferenceTitle>
+      <Duration>PT6M15S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>DJ Sable</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>DJ Sable</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Phosphor Records</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Phosphor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Tech House</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T3</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>24</BitsPerSample>
+        <Duration>PT6M15S</Duration>
+        <File>
+          <FileName>FRZ0425000203.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>cc33dd44ee55ff66aa11bb22cc33dd44ee55ff66aa11bb22cc33dd44ee55ff66</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 4: Golden Hour -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>FRZ0425000204</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A4</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Golden Hour</TitleText>
+      </ReferenceTitle>
+      <Duration>PT4M22S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>DJ Sable</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>DJ Sable</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Phosphor Records</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Phosphor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>House</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T4</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>24</BitsPerSample>
+        <Duration>PT4M22S</Duration>
+        <File>
+          <FileName>FRZ0425000204.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>dd44ee55ff66aa11bb22cc33dd44ee55ff66aa11bb22cc33dd44ee55ff66aa11</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 5: Night Market (Kira Remix) -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>FRZ0425000205</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A5</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Night Market (Kira Remix)</TitleText>
+      </ReferenceTitle>
+      <Duration>PT6M44S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>DJ Sable &amp; Kira</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>DJ Sable</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <DisplayArtist SequenceNumber="2">
+          <PartyName>
+            <FullName>Kira</FullName>
+          </PartyName>
+          <ArtistRole>Remixer</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Phosphor Records</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Phosphor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>House</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T5</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>24</BitsPerSample>
+        <Duration>PT6M44S</Duration>
+        <File>
+          <FileName>FRZ0425000205.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>ee55ff66aa11bb22cc33dd44ee55ff66aa11bb22cc33dd44ee55ff66aa11bb22</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Front Cover -->
+    <Image>
+      <ImageType>FrontCoverImage</ImageType>
+      <ImageId>
+        <ProprietaryId Namespace="PADPIDA2025060101P">IMG145-01</ProprietaryId>
+      </ImageId>
+      <ResourceReference>A6</ResourceReference>
+      <TechnicalImageDetails>
+        <TechnicalResourceDetailsReference>T6</TechnicalResourceDetailsReference>
+        <ImageCodecType>JPEG</ImageCodecType>
+        <ImageHeight>3000</ImageHeight>
+        <ImageWidth>3000</ImageWidth>
+        <File>
+          <FileName>cover_front.jpg</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>ff66aa11bb22cc33dd44ee55ff66aa11bb22cc33dd44ee55ff66aa11bb22cc33</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalImageDetails>
+    </Image>
+  </ResourceList>
+
+  <ReleaseList>
+    <!-- Main EP Release -->
+    <Release IsMainRelease="true">
+      <ReleaseId>
+        <ICPN>4050538123456</ICPN>
+      </ReleaseId>
+      <ReleaseReference>R0</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Night Market</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A1</ReleaseResourceReference>
+        <ReleaseResourceReference>A2</ReleaseResourceReference>
+        <ReleaseResourceReference>A3</ReleaseResourceReference>
+        <ReleaseResourceReference>A4</ReleaseResourceReference>
+        <ReleaseResourceReference>A5</ReleaseResourceReference>
+        <ReleaseResourceReference>A6</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>EP</ReleaseType>
+      <ReleaseDate>2025-08-15</ReleaseDate>
+      <Duration>PT27M41S</Duration>
+      <PLine>
+        <Year>2025</Year>
+        <PLineText>2025 Phosphor Records</PLineText>
+      </PLine>
+      <CLine>
+        <Year>2025</Year>
+        <CLineText>2025 Phosphor Records</CLineText>
+      </CLine>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>DJ Sable</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>DJ Sable</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Phosphor Records</LabelName>
+        <Title TitleType="FormalTitle" LanguageAndScriptCode="en">
+          <TitleText>Night Market</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>House</SubGenre>
+        </Genre>
+        <ParentalWarningType>Explicit</ParentalWarningType>
+        <LanguageAndScriptCode>en</LanguageAndScriptCode>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <!-- Track Releases -->
+    <Release>
+      <ReleaseId>
+        <ISRC>FRZ0425000201</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R1</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Night Market</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A1</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>DJ Sable</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Night Market</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>House</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>FRZ0425000202</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R2</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Jade Lantern</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A2</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>DJ Sable</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Jade Lantern</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Deep House</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>FRZ0425000203</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R3</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Silk Road</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A3</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>DJ Sable</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Silk Road</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Tech House</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>FRZ0425000204</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R4</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Golden Hour</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A4</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>DJ Sable</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Golden Hour</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>House</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>FRZ0425000205</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R5</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Night Market (Kira Remix)</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A5</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>DJ Sable &amp; Kira</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Night Market (Kira Remix)</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>House</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+  </ReleaseList>
+
+  <DealList>
+    <!-- Worldwide streaming on release date -->
+    <ReleaseDeal>
+      <DealReleaseReference>R0</DealReleaseReference>
+      <Deal>
+        <DealTerms>
+          <CommercialModelType>SubscriptionModel</CommercialModelType>
+          <Usage>
+            <UseType>OnDemandStream</UseType>
+          </Usage>
+          <TerritoryCode>Worldwide</TerritoryCode>
+          <ValidityPeriod>
+            <StartDate>2025-08-15</StartDate>
+          </ValidityPeriod>
+        </DealTerms>
+      </Deal>
+    </ReleaseDeal>
+
+    <!-- Worldwide download -->
+    <ReleaseDeal>
+      <DealReleaseReference>R0</DealReleaseReference>
+      <Deal>
+        <DealTerms>
+          <CommercialModelType>PayAsYouGoModel</CommercialModelType>
+          <Usage>
+            <UseType>PermanentDownload</UseType>
+          </Usage>
+          <TerritoryCode>Worldwide</TerritoryCode>
+          <ValidityPeriod>
+            <StartDate>2025-08-15</StartDate>
+          </ValidityPeriod>
+        </DealTerms>
+      </Deal>
+    </ReleaseDeal>
+
+    <!-- EU pre-release streaming (1 week early) -->
+    <ReleaseDeal>
+      <DealReleaseReference>R0</DealReleaseReference>
+      <Deal>
+        <DealTerms>
+          <CommercialModelType>SubscriptionModel</CommercialModelType>
+          <Usage>
+            <UseType>OnDemandStream</UseType>
+          </Usage>
+          <TerritoryCode>DE</TerritoryCode>
+          <TerritoryCode>FR</TerritoryCode>
+          <TerritoryCode>NL</TerritoryCode>
+          <TerritoryCode>BE</TerritoryCode>
+          <ValidityPeriod>
+            <StartDate>2025-08-08</StartDate>
+            <EndDate>2025-08-14</EndDate>
+          </ValidityPeriod>
+        </DealTerms>
+      </Deal>
+    </ReleaseDeal>
+
+    <!-- Japan exclusive streaming with ad-supported -->
+    <ReleaseDeal>
+      <DealReleaseReference>R0</DealReleaseReference>
+      <Deal>
+        <DealTerms>
+          <CommercialModelType>AdvertisementSupportedModel</CommercialModelType>
+          <Usage>
+            <UseType>OnDemandStream</UseType>
+          </Usage>
+          <TerritoryCode>JP</TerritoryCode>
+          <ValidityPeriod>
+            <StartDate>2025-08-15</StartDate>
+          </ValidityPeriod>
+        </DealTerms>
+      </Deal>
+    </ReleaseDeal>
+  </DealList>
+</ern:NewReleaseMessage>

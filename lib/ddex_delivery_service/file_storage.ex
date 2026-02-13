@@ -155,6 +155,53 @@ defmodule DdexDeliveryService.FileStorage do
     :ok
   end
 
+  @doc """
+  Store a local file to S3 and create a StoredFile record.
+
+  Used by the SFTP/package ingestion pipeline to store resource files (audio, artwork).
+
+  `attrs` should include `:filename` and `:content_type`. The file type is auto-detected
+  from the content type.
+  """
+  def store_file(local_path, org_id, delivery_id, attrs) do
+    content = File.read!(local_path)
+    file_type = detect_file_type(attrs[:content_type] || attrs["content_type"])
+    filename = attrs[:filename] || attrs["filename"]
+    content_type = attrs[:content_type] || attrs["content_type"] || "application/octet-stream"
+    s3_key = build_key(org_id, delivery_id, file_type, filename)
+    byte_size = byte_size(content)
+    checksum = :crypto.hash(:sha256, content) |> Base.encode16(case: :lower)
+
+    case upload_to_s3(s3_key, content, content_type) do
+      {:ok, _} ->
+        register_file(org_id, delivery_id, %{
+          key: s3_key,
+          filename: filename,
+          content_type: content_type,
+          byte_size: byte_size,
+          checksum_sha256: checksum,
+          file_type: file_type
+        })
+
+      {:error, reason} ->
+        {:error, {:upload_failed, reason}}
+    end
+  end
+
+  @doc """
+  Detect file type from content type string.
+  """
+  def detect_file_type(content_type) when is_binary(content_type) do
+    cond do
+      String.starts_with?(content_type, "audio/") -> :audio
+      String.starts_with?(content_type, "image/") -> :artwork
+      String.contains?(content_type, "xml") -> :xml
+      true -> :audio
+    end
+  end
+
+  def detect_file_type(_), do: :audio
+
   defp build_key(org_id, delivery_id, file_type, filename) do
     "tenants/#{org_id}/deliveries/#{delivery_id}/#{file_type}/#{filename}"
   end

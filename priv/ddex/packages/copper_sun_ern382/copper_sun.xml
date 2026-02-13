@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ern:NewReleaseMessage xmlns:ern="http://ddex.net/xml/ern/382" MessageSchemaVersionId="ern/382">
+  <MessageHeader>
+    <MessageThreadId>MSG-2025-112</MessageThreadId>
+    <MessageId>MSG-2025-112-001</MessageId>
+    <MessageSender>
+      <PartyId>PADPIDA2025050201D</PartyId>
+      <PartyName>
+        <FullName>Dusk Recordings</FullName>
+      </PartyName>
+    </MessageSender>
+    <MessageRecipient>
+      <PartyId>PADPIDA2024010102B</PartyId>
+      <PartyName>
+        <FullName>DDEX Delivery Service</FullName>
+      </PartyName>
+    </MessageRecipient>
+    <MessageCreatedDateTime>2025-05-10T16:30:00Z</MessageCreatedDateTime>
+  </MessageHeader>
+
+  <ResourceList>
+    <!-- Track 1: Copper Sun -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>GBAYE2500001</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A1</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Copper Sun</TitleText>
+      </ReferenceTitle>
+      <Duration>PT3M54S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Copper Sun</TitleText>
+        </Title>
+        <DisplayArtistName>The Midnight Wire</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>The Midnight Wire</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Dusk Recordings</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Dusk Recordings</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Alternative</GenreText>
+          <SubGenre>Indie Rock</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T1</TechnicalResourceDetailsReference>
+        <AudioCodecType>PCM</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>16</BitsPerSample>
+        <Duration>PT3M54S</Duration>
+        <File>
+          <FileName>GBAYE2500001.wav</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 2: Copper Sun (Acoustic) -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>GBAYE2500002</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A2</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Copper Sun (Acoustic)</TitleText>
+      </ReferenceTitle>
+      <Duration>PT4M11S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Copper Sun (Acoustic)</TitleText>
+        </Title>
+        <DisplayArtistName>The Midnight Wire</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>The Midnight Wire</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Dusk Recordings</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Dusk Recordings</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Alternative</GenreText>
+          <SubGenre>Acoustic</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T2</TechnicalResourceDetailsReference>
+        <AudioCodecType>PCM</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>16</BitsPerSample>
+        <Duration>PT4M11S</Duration>
+        <File>
+          <FileName>GBAYE2500002.wav</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Front Cover -->
+    <Image>
+      <ImageType>FrontCoverImage</ImageType>
+      <ImageId>
+        <ProprietaryId Namespace="PADPIDA2025050201D">IMG112-01</ProprietaryId>
+      </ImageId>
+      <ResourceReference>A3</ResourceReference>
+      <ImageDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+      </ImageDetailsByTerritory>
+      <TechnicalImageDetails>
+        <TechnicalResourceDetailsReference>T3</TechnicalResourceDetailsReference>
+        <ImageCodecType>JPEG</ImageCodecType>
+        <ImageHeight>3000</ImageHeight>
+        <ImageWidth>3000</ImageWidth>
+        <File>
+          <FileName>cover_front.jpg</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalImageDetails>
+    </Image>
+  </ResourceList>
+
+  <ReleaseList>
+    <!-- Main Single Release -->
+    <Release IsMainRelease="true">
+      <ReleaseId>
+        <ICPN>5060123456780</ICPN>
+      </ReleaseId>
+      <ReleaseReference>R0</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Copper Sun</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A1</ReleaseResourceReference>
+        <ReleaseResourceReference>A2</ReleaseResourceReference>
+        <ReleaseResourceReference>A3</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>Single</ReleaseType>
+      <ReleaseDate>2025-07-04</ReleaseDate>
+      <Duration>PT8M05S</Duration>
+      <PLine>
+        <Year>2025</Year>
+        <PLineText>2025 Dusk Recordings</PLineText>
+      </PLine>
+      <CLine>
+        <Year>2025</Year>
+        <CLineText>2025 Dusk Recordings</CLineText>
+      </CLine>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>The Midnight Wire</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>The Midnight Wire</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Dusk Recordings</LabelName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Copper Sun</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Alternative</GenreText>
+          <SubGenre>Indie Rock</SubGenre>
+        </Genre>
+        <ParentalWarningType>NotExplicit</ParentalWarningType>
+        <LanguageAndScriptCode>en</LanguageAndScriptCode>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <!-- Track Releases -->
+    <Release>
+      <ReleaseId>
+        <ISRC>GBAYE2500001</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R1</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Copper Sun</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A1</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>The Midnight Wire</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Copper Sun</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Alternative</GenreText>
+          <SubGenre>Indie Rock</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>GBAYE2500002</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R2</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Copper Sun (Acoustic)</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A2</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>The Midnight Wire</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Copper Sun (Acoustic)</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Alternative</GenreText>
+          <SubGenre>Acoustic</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+  </ReleaseList>
+
+  <DealList>
+    <!-- Streaming deal -->
+    <ReleaseDeal>
+      <DealReleaseReference>R0</DealReleaseReference>
+      <Deal>
+        <DealTerms>
+          <CommercialModelType>SubscriptionModel</CommercialModelType>
+          <Usage>
+            <UseType>OnDemandStream</UseType>
+          </Usage>
+          <TerritoryCode>Worldwide</TerritoryCode>
+          <ValidityPeriod>
+            <StartDate>2025-07-04</StartDate>
+          </ValidityPeriod>
+        </DealTerms>
+      </Deal>
+    </ReleaseDeal>
+
+    <!-- Download deal -->
+    <ReleaseDeal>
+      <DealReleaseReference>R0</DealReleaseReference>
+      <Deal>
+        <DealTerms>
+          <CommercialModelType>PayAsYouGoModel</CommercialModelType>
+          <Usage>
+            <UseType>PermanentDownload</UseType>
+          </Usage>
+          <TerritoryCode>Worldwide</TerritoryCode>
+          <ValidityPeriod>
+            <StartDate>2025-07-04</StartDate>
+          </ValidityPeriod>
+        </DealTerms>
+      </Deal>
+    </ReleaseDeal>
+  </DealList>
+</ern:NewReleaseMessage>

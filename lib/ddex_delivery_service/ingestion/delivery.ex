@@ -54,7 +54,7 @@ defmodule DdexDeliveryService.Ingestion.Delivery do
     uuid_primary_key :id
 
     attribute :source, :atom do
-      constraints one_of: [:upload]
+      constraints one_of: [:upload, :sftp]
       default :upload
       public? true
     end

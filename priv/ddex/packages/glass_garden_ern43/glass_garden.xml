@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ern:NewReleaseMessage xmlns:ern="http://ddex.net/xml/ern/43" MessageSchemaVersionId="ern/43">
+  <MessageHeader>
+    <MessageThreadId>MSG-2025-088</MessageThreadId>
+    <MessageId>MSG-2025-088-001</MessageId>
+    <MessageSender>
+      <PartyId>PADPIDA2025040101H</PartyId>
+      <PartyName>
+        <FullName>Halcyon Music Group</FullName>
+      </PartyName>
+    </MessageSender>
+    <MessageRecipient>
+      <PartyId>PADPIDA2024010102B</PartyId>
+      <PartyName>
+        <FullName>DDEX Delivery Service</FullName>
+      </PartyName>
+    </MessageRecipient>
+    <MessageCreatedDateTime>2025-04-01T09:15:00Z</MessageCreatedDateTime>
+  </MessageHeader>
+
+  <PartyList>
+    <Party>
+      <PartyReference>P1</PartyReference>
+      <PartyName>
+        <FullName>Mara Chen</FullName>
+      </PartyName>
+      <PartyId>
+        <ISNI>0000000498761234</ISNI>
+      </PartyId>
+    </Party>
+    <Party>
+      <PartyReference>P2</PartyReference>
+      <PartyName>
+        <FullName>Yuki Tanaka</FullName>
+      </PartyName>
+      <PartyId>
+        <ISNI>0000000523456789</ISNI>
+      </PartyId>
+    </Party>
+    <Party>
+      <PartyReference>P3</PartyReference>
+      <PartyName>
+        <FullName>Leo Strand</FullName>
+      </PartyName>
+      <PartyId>
+        <ISNI>0000000587654321</ISNI>
+      </PartyId>
+    </Party>
+    <Party>
+      <PartyReference>P4</PartyReference>
+      <PartyName>
+        <FullName>Halcyon Music Group</FullName>
+      </PartyName>
+      <PartyId>
+        <DPID>PADPIDA2025040101H</DPID>
+      </PartyId>
+    </Party>
+  </PartyList>
+
+  <ResourceList>
+    <!-- Track 1: Prism Light (feat. Yuki Tanaka) -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>GBX0425000101</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A1</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Prism Light</TitleText>
+      </ReferenceTitle>
+      <Duration>PT4M18S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen feat. Yuki Tanaka</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>Mara Chen</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <DisplayArtist SequenceNumber="2">
+          <PartyName>
+            <FullName>Yuki Tanaka</FullName>
+          </PartyName>
+          <ArtistRole>FeaturedArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Halcyon Music Group</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Halcyon Music Group</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T1</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>16</BitsPerSample>
+        <Duration>PT4M18S</Duration>
+        <File>
+          <FileName>GBX0425000101.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 2: Soft Machine -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>GBX0425000102</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A2</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Soft Machine</TitleText>
+      </ReferenceTitle>
+      <Duration>PT3M42S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>Mara Chen</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Halcyon Music Group</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Halcyon Music Group</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T2</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>16</BitsPerSample>
+        <Duration>PT3M42S</Duration>
+        <File>
+          <FileName>GBX0425000102.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 3: Dissolve -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>GBX0425000103</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A3</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Dissolve</TitleText>
+      </ReferenceTitle>
+      <Duration>PT5M07S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>Mara Chen</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Halcyon Music Group</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Halcyon Music Group</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T3</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>16</BitsPerSample>
+        <Duration>PT5M07S</Duration>
+        <File>
+          <FileName>GBX0425000103.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 4: Glass Garden -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>GBX0425000104</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A4</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Glass Garden</TitleText>
+      </ReferenceTitle>
+      <Duration>PT4M55S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>Mara Chen</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Halcyon Music Group</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Halcyon Music Group</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T4</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>16</BitsPerSample>
+        <Duration>PT4M55S</Duration>
+        <File>
+          <FileName>GBX0425000104.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 5: Tidal -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>GBX0425000105</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A5</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Tidal</TitleText>
+      </ReferenceTitle>
+      <Duration>PT3M29S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>Mara Chen</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Halcyon Music Group</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Halcyon Music Group</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Shoegaze</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T5</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>16</BitsPerSample>
+        <Duration>PT3M29S</Duration>
+        <File>
+          <FileName>GBX0425000105.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 6: Moth to Neon (feat. Leo Strand) -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>GBX0425000106</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A6</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Moth to Neon</TitleText>
+      </ReferenceTitle>
+      <Duration>PT4M33S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen feat. Leo Strand</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>Mara Chen</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <DisplayArtist SequenceNumber="2">
+          <PartyName>
+            <FullName>Leo Strand</FullName>
+          </PartyName>
+          <ArtistRole>FeaturedArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Halcyon Music Group</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Halcyon Music Group</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T6</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>16</BitsPerSample>
+        <Duration>PT4M33S</Duration>
+        <File>
+          <FileName>GBX0425000106.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 7: Afterimage -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>GBX0425000107</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A7</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Afterimage</TitleText>
+      </ReferenceTitle>
+      <Duration>PT3M51S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>Mara Chen</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Halcyon Music Group</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Halcyon Music Group</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T7</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>16</BitsPerSample>
+        <Duration>PT3M51S</Duration>
+        <File>
+          <FileName>GBX0425000107.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>a1c3e5b2d4f6a1c3e5b2d4f6a1c3e5b2d4f6a1c3e5b2d4f6a1c3e5b2d4f6a1c3</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Track 8: Still Water (ambient closer) -->
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>GBX0425000108</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A8</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Still Water</TitleText>
+      </ReferenceTitle>
+      <Duration>PT6M12S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>Mara Chen</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Halcyon Music Group</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Halcyon Music Group</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Ambient</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+      <TechnicalSoundRecordingDetails>
+        <TechnicalResourceDetailsReference>T8</TechnicalResourceDetailsReference>
+        <AudioCodecType>FLAC</AudioCodecType>
+        <NumberOfChannels>2</NumberOfChannels>
+        <SamplingRate>44100</SamplingRate>
+        <BitsPerSample>16</BitsPerSample>
+        <Duration>PT6M12S</Duration>
+        <File>
+          <FileName>GBX0425000108.flac</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>b2d4f6a1c3e5b2d4f6a1c3e5b2d4f6a1c3e5b2d4f6a1c3e5b2d4f6a1c3e5b2d4</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalSoundRecordingDetails>
+    </SoundRecording>
+
+    <!-- Front Cover -->
+    <Image>
+      <ImageType>FrontCoverImage</ImageType>
+      <ImageId>
+        <ProprietaryId Namespace="PADPIDA2025040101H">IMG088-01</ProprietaryId>
+      </ImageId>
+      <ResourceReference>A9</ResourceReference>
+      <TechnicalImageDetails>
+        <TechnicalResourceDetailsReference>T9</TechnicalResourceDetailsReference>
+        <ImageCodecType>JPEG</ImageCodecType>
+        <ImageHeight>3000</ImageHeight>
+        <ImageWidth>3000</ImageWidth>
+        <File>
+          <FileName>cover_front.jpg</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>c3e5a1b2d4f6c3e5a1b2d4f6c3e5a1b2d4f6c3e5a1b2d4f6c3e5a1b2d4f6c3e5</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalImageDetails>
+    </Image>
+
+    <!-- Digital Booklet -->
+    <Image>
+      <ImageType>BookletFrontImage</ImageType>
+      <ImageId>
+        <ProprietaryId Namespace="PADPIDA2025040101H">IMG088-02</ProprietaryId>
+      </ImageId>
+      <ResourceReference>A10</ResourceReference>
+      <TechnicalImageDetails>
+        <TechnicalResourceDetailsReference>T10</TechnicalResourceDetailsReference>
+        <ImageCodecType>PDF</ImageCodecType>
+        <File>
+          <FileName>booklet.pdf</FileName>
+          <FilePath>resources/</FilePath>
+          <HashSum>
+            <HashSumAlgorithmType>SHA256</HashSumAlgorithmType>
+            <HashSumValue>d4f6b2c3e5a1d4f6b2c3e5a1d4f6b2c3e5a1d4f6b2c3e5a1d4f6b2c3e5a1d4f6</HashSumValue>
+          </HashSum>
+        </File>
+      </TechnicalImageDetails>
+    </Image>
+  </ResourceList>
+
+  <ReleaseList>
+    <!-- Main Album Release -->
+    <Release IsMainRelease="true">
+      <ReleaseId>
+        <ICPN>0196118307423</ICPN>
+      </ReleaseId>
+      <ReleaseReference>R0</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Glass Garden</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A1</ReleaseResourceReference>
+        <ReleaseResourceReference>A2</ReleaseResourceReference>
+        <ReleaseResourceReference>A3</ReleaseResourceReference>
+        <ReleaseResourceReference>A4</ReleaseResourceReference>
+        <ReleaseResourceReference>A5</ReleaseResourceReference>
+        <ReleaseResourceReference>A6</ReleaseResourceReference>
+        <ReleaseResourceReference>A7</ReleaseResourceReference>
+        <ReleaseResourceReference>A8</ReleaseResourceReference>
+        <ReleaseResourceReference>A9</ReleaseResourceReference>
+        <ReleaseResourceReference>A10</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>Album</ReleaseType>
+      <ReleaseDate>2025-06-20</ReleaseDate>
+      <Duration>PT36M07S</Duration>
+      <PLine>
+        <Year>2025</Year>
+        <PLineText>2025 Halcyon Music Group</PLineText>
+      </PLine>
+      <CLine>
+        <Year>2025</Year>
+        <CLineText>2025 Halcyon Music Group</CLineText>
+      </CLine>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <DisplayArtist SequenceNumber="1">
+          <PartyName>
+            <FullName>Mara Chen</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Halcyon Music Group</LabelName>
+        <Title TitleType="FormalTitle" LanguageAndScriptCode="en">
+          <TitleText>Glass Garden</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+        <ParentalWarningType>NotExplicit</ParentalWarningType>
+        <LanguageAndScriptCode>en</LanguageAndScriptCode>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <!-- Track Releases -->
+    <Release>
+      <ReleaseId>
+        <ISRC>GBX0425000101</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R1</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Prism Light</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A1</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen feat. Yuki Tanaka</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Prism Light</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>GBX0425000102</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R2</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Soft Machine</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A2</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Soft Machine</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>GBX0425000103</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R3</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Dissolve</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A3</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Dissolve</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>GBX0425000104</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R4</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Glass Garden</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A4</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Glass Garden</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>GBX0425000105</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R5</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Tidal</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A5</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Tidal</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Shoegaze</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>GBX0425000106</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R6</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Moth to Neon</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A6</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen feat. Leo Strand</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Moth to Neon</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>GBX0425000107</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R7</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Afterimage</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A7</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Afterimage</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Dream Pop</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>GBX0425000108</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R8</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Still Water</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A8</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Mara Chen</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Still Water</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Indie</GenreText>
+          <SubGenre>Ambient</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+  </ReleaseList>
+
+  <DealList>
+    <!-- Streaming deal -->
+    <ReleaseDeal>
+      <DealReleaseReference>R0</DealReleaseReference>
+      <Deal>
+        <DealTerms>
+          <CommercialModelType>SubscriptionModel</CommercialModelType>
+          <Usage>
+            <UseType>OnDemandStream</UseType>
+          </Usage>
+          <TerritoryCode>Worldwide</TerritoryCode>
+          <ValidityPeriod>
+            <StartDate>2025-06-20</StartDate>
+          </ValidityPeriod>
+        </DealTerms>
+      </Deal>
+    </ReleaseDeal>
+
+    <!-- Download deal -->
+    <ReleaseDeal>
+      <DealReleaseReference>R0</DealReleaseReference>
+      <Deal>
+        <DealTerms>
+          <CommercialModelType>PayAsYouGoModel</CommercialModelType>
+          <Usage>
+            <UseType>PermanentDownload</UseType>
+          </Usage>
+          <TerritoryCode>Worldwide</TerritoryCode>
+          <ValidityPeriod>
+            <StartDate>2025-06-20</StartDate>
+          </ValidityPeriod>
+        </DealTerms>
+      </Deal>
+    </ReleaseDeal>
+
+    <!-- EU pre-release streaming -->
+    <ReleaseDeal>
+      <DealReleaseReference>R0</DealReleaseReference>
+      <Deal>
+        <DealTerms>
+          <CommercialModelType>SubscriptionModel</CommercialModelType>
+          <Usage>
+            <UseType>OnDemandStream</UseType>
+          </Usage>
+          <TerritoryCode>DE</TerritoryCode>
+          <TerritoryCode>FR</TerritoryCode>
+          <TerritoryCode>GB</TerritoryCode>
+          <TerritoryCode>NL</TerritoryCode>
+          <ValidityPeriod>
+            <StartDate>2025-06-13</StartDate>
+            <EndDate>2025-06-19</EndDate>
+          </ValidityPeriod>
+        </DealTerms>
+      </Deal>
+    </ReleaseDeal>
+  </DealList>
+</ern:NewReleaseMessage>

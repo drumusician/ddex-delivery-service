@@ -14,11 +14,11 @@ defmodule DdexDeliveryService.Accounts.Organization do
     defaults [:read, :destroy]
 
     create :create do
-      accept [:name, :slug, :ddex_party_id, :status]
+      accept [:name, :slug, :ddex_party_id, :status, :role]
     end
 
     update :update do
-      accept [:name, :ddex_party_id, :status]
+      accept [:name, :ddex_party_id, :status, :role]
     end
   end
 
@@ -47,6 +47,11 @@ defmodule DdexDeliveryService.Accounts.Organization do
 
     attribute :ddex_party_id, :string, public?: true
 
+    attribute :role, :atom do
+      constraints one_of: [:supplier, :recipient]
+      public? true
+    end
+
     attribute :status, :atom do
       constraints one_of: [:active, :suspended, :trial]
       default :trial
@@ -59,6 +64,15 @@ defmodule DdexDeliveryService.Accounts.Organization do
 
   relationships do
     has_many :memberships, DdexDeliveryService.Accounts.Membership
+    has_many :sftp_keys, DdexDeliveryService.Accounts.SftpKey
+
+    has_many :supplier_connections, DdexDeliveryService.Accounts.Connection do
+      destination_attribute :supplier_id
+    end
+
+    has_many :recipient_connections, DdexDeliveryService.Accounts.Connection do
+      destination_attribute :recipient_id
+    end
   end
 
   identities do

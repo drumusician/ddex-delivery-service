@@ -23,7 +23,7 @@ defmodule DdexDeliveryService.MixProject do
   def application do
     [
       mod: {DdexDeliveryService.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :ssh, :crypto, :public_key]
     ]
   end
 

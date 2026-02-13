@@ -35,3 +35,9 @@ ddex_delivery_service-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# OS files
+.DS_Store
+
+# SSH keys (generated at runtime)
+/priv/sftp/ssh_host_*
+

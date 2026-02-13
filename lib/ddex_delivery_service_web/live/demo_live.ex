@@ -21,19 +21,30 @@ defmodule DdexDeliveryServiceWeb.DemoLive do
        current_tab: "parsed",
        error: nil,
        processing: false,
-       org_id: org.id
+       org_id: org.id,
+       upload_mode: :single
      )
-     |> allow_upload(:xml_file, accept: ~w(.xml), max_entries: 1, max_file_size: 10_000_000)}
+     |> allow_upload(:xml_file, accept: ~w(.xml), max_entries: 1, max_file_size: 10_000_000)
+     |> allow_upload(:package_files,
+       accept:
+         ~w(.xml .flac .wav .mp3 .aac .jpg .jpeg .png .pdf),
+       max_entries: 20,
+       max_file_size: 500_000_000
+     )}
   end
 
   defp get_or_create_demo_org do
     case DdexDeliveryService.Accounts.get_organization_by_slug("demo", actor: system_actor()) do
-      {:ok, org} -> org
+      {:ok, org} ->
+        org
+
       _ ->
-        {:ok, org} = DdexDeliveryService.Accounts.create_organization(
-          %{name: "Demo Organization", slug: "demo"},
-          actor: system_actor()
-        )
+        {:ok, org} =
+          DdexDeliveryService.Accounts.create_organization(
+            %{name: "Demo Organization", slug: "demo"},
+            actor: system_actor()
+          )
+
         org
     end
   end
@@ -63,6 +74,10 @@ defmodule DdexDeliveryServiceWeb.DemoLive do
     {:noreply, socket}
   end
 
+  def handle_event("switch_upload_mode", %{"mode" => mode}, socket) do
+    {:noreply, assign(socket, upload_mode: String.to_existing_atom(mode))}
+  end
+
   def handle_event("upload_xml", _params, socket) do
     [xml_content] =
       consume_uploaded_entries(socket, :xml_file, fn %{path: path}, entry ->
@@ -90,6 +105,59 @@ defmodule DdexDeliveryServiceWeb.DemoLive do
       {:noreply, assign(socket, error: "Failed to start processing: #{Exception.message(e)}")}
   end
 
+  def handle_event("upload_package", _params, socket) do
+    # Consume all uploaded files, separating XML from resources
+    uploaded_files =
+      consume_uploaded_entries(socket, :package_files, fn %{path: path}, entry ->
+        # Copy to a temp file that persists after consume
+        tmp_path = System.tmp_dir!() |> Path.join("ddex_upload_#{Ash.UUID.generate()}_#{entry.client_name}")
+        File.cp!(path, tmp_path)
+        {:ok, %{path: tmp_path, filename: entry.client_name, content_type: entry.client_type}}
+      end)
+
+    # Separate XML from resources
+    {xml_files, resource_files} =
+      Enum.split_with(uploaded_files, fn file ->
+        String.ends_with?(file.filename, ".xml")
+      end)
+
+    case xml_files do
+      [xml_file | _] ->
+        xml_content = File.read!(xml_file.path)
+
+        {:ok, delivery} =
+          Ingest.ingest_package(
+            xml_content,
+            resource_files,
+            socket.assigns.org_id,
+            xml_file.filename
+          )
+
+        # Clean up temp files
+        for file <- uploaded_files, do: File.rm(file.path)
+
+        Phoenix.PubSub.subscribe(DdexDeliveryService.PubSub, "delivery:#{delivery.id}")
+
+        {:noreply,
+         socket
+         |> assign(
+           delivery: delivery,
+           processing: true,
+           status_steps: [%{label: "Received", status: :done, detail: nil}],
+           error: nil,
+           release: nil,
+           tracks: []
+         )}
+
+      [] ->
+        for file <- uploaded_files, do: File.rm(file.path)
+        {:noreply, assign(socket, error: "No XML metadata file found in uploaded files")}
+    end
+  rescue
+    e ->
+      {:noreply, assign(socket, error: "Failed to process package: #{Exception.message(e)}")}
+  end
+
   def handle_event("switch_tab", %{"tab" => tab}, socket) do
     {:noreply, assign(socket, current_tab: tab)}
   end
@@ -104,7 +172,8 @@ defmodule DdexDeliveryServiceWeb.DemoLive do
        status_steps: [],
        current_tab: "parsed",
        error: nil,
-       processing: false
+       processing: false,
+       upload_mode: :single
      )}
   end
 
@@ -205,49 +274,142 @@ defmodule DdexDeliveryServiceWeb.DemoLive do
                 </h2>
 
                 <div :if={!@delivery}>
-                  <form id="upload-form" phx-submit="upload_xml" phx-change="validate_upload" class="space-y-4">
-                    <div
-                      class="border-2 border-dashed border-base-300 rounded-lg p-6 sm:p-8 text-center hover:border-primary/50 transition-colors"
-                      phx-drop-target={@uploads.xml_file.ref}
-                    >
-                      <.icon name="hero-document-arrow-up" class="size-10 text-base-content/20 mx-auto mb-3" />
-                      <p class="text-sm text-base-content/60 mb-2">
-                        Drag & drop your DDEX XML file here
-                      </p>
-                      <.live_file_input upload={@uploads.xml_file} class="file-input file-input-bordered file-input-sm w-full max-w-xs" />
-                    </div>
-
-                    <div :for={entry <- @uploads.xml_file.entries} class="flex items-center gap-2 text-sm">
-                      <.icon name="hero-document" class="size-4 text-primary" />
-                      <span class="flex-1 truncate">{entry.client_name}</span>
-                      <span class="text-base-content/50">{format_bytes(entry.client_size)}</span>
-                    </div>
-
+                  <%!-- Upload Mode Toggle --%>
+                  <div class="flex gap-2 mb-4">
                     <button
-                      type="submit"
-                      class="btn btn-primary w-full"
-                      disabled={@uploads.xml_file.entries == []}
+                      phx-click="switch_upload_mode"
+                      phx-value-mode="single"
+                      class={["btn btn-sm flex-1", @upload_mode == :single && "btn-primary" || "btn-ghost"]}
                     >
-                      <.icon name="hero-arrow-up-tray" class="size-4" />
-                      Upload & Process
+                      <.icon name="hero-document" class="size-4" />
+                      Single XML
                     </button>
-                  </form>
+                    <button
+                      phx-click="switch_upload_mode"
+                      phx-value-mode="package"
+                      class={["btn btn-sm flex-1", @upload_mode == :package && "btn-primary" || "btn-ghost"]}
+                    >
+                      <.icon name="hero-folder" class="size-4" />
+                      Full Package
+                    </button>
+                  </div>
+
+                  <%!-- Single XML Upload --%>
+                  <div :if={@upload_mode == :single}>
+                    <form id="upload-form" phx-submit="upload_xml" phx-change="validate_upload" class="space-y-4">
+                      <div
+                        class="border-2 border-dashed border-base-300 rounded-lg p-6 sm:p-8 text-center hover:border-primary/50 transition-colors"
+                        phx-drop-target={@uploads.xml_file.ref}
+                      >
+                        <.icon name="hero-document-arrow-up" class="size-10 text-base-content/20 mx-auto mb-3" />
+                        <p class="text-sm text-base-content/60 mb-2">
+                          Drag & drop your DDEX XML file here
+                        </p>
+                        <.live_file_input upload={@uploads.xml_file} class="file-input file-input-bordered file-input-sm w-full max-w-xs" />
+                      </div>
+
+                      <div :for={entry <- @uploads.xml_file.entries} class="flex items-center gap-2 text-sm">
+                        <.icon name="hero-document" class="size-4 text-primary" />
+                        <span class="flex-1 truncate">{entry.client_name}</span>
+                        <span class="text-base-content/50">{format_bytes(entry.client_size)}</span>
+                      </div>
+
+                      <button
+                        type="submit"
+                        class="btn btn-primary w-full"
+                        disabled={@uploads.xml_file.entries == []}
+                      >
+                        <.icon name="hero-arrow-up-tray" class="size-4" />
+                        Upload & Process
+                      </button>
+                    </form>
+                  </div>
+
+                  <%!-- Package Upload (Multi-file) --%>
+                  <div :if={@upload_mode == :package}>
+                    <form id="package-upload-form" phx-submit="upload_package" phx-change="validate_upload" class="space-y-4">
+                      <div
+                        class="border-2 border-dashed border-base-300 rounded-lg p-6 sm:p-8 text-center hover:border-primary/50 transition-colors"
+                        phx-drop-target={@uploads.package_files.ref}
+                      >
+                        <.icon name="hero-folder-arrow-down" class="size-10 text-base-content/20 mx-auto mb-3" />
+                        <p class="text-sm text-base-content/60 mb-2">
+                          Drag & drop XML + audio + artwork files
+                        </p>
+                        <p class="text-xs text-base-content/40 mb-3">
+                          Include your DDEX XML metadata and any resource files (FLAC, WAV, MP3, JPG, PNG)
+                        </p>
+                        <.live_file_input upload={@uploads.package_files} class="file-input file-input-bordered file-input-sm w-full max-w-xs" />
+                      </div>
+
+                      <div :if={@uploads.package_files.entries != []} class="space-y-1">
+                        <p class="text-xs text-base-content/50 font-semibold">
+                          {length(@uploads.package_files.entries)} files selected
+                        </p>
+                        <div :for={entry <- @uploads.package_files.entries} class="flex items-center gap-2 text-sm">
+                          <.icon name={file_type_icon(entry.client_name)} class={["size-4", file_type_color(entry.client_name)]} />
+                          <span class="flex-1 truncate">{entry.client_name}</span>
+                          <span class="badge badge-xs">{file_type_label(entry.client_name)}</span>
+                          <span class="text-base-content/50">{format_bytes(entry.client_size)}</span>
+                        </div>
+                      </div>
+
+                      <button
+                        type="submit"
+                        class="btn btn-primary w-full"
+                        disabled={@uploads.package_files.entries == [] or not has_xml_file?(@uploads.package_files.entries)}
+                      >
+                        <.icon name="hero-arrow-up-tray" class="size-4" />
+                        Upload Package & Process
+                      </button>
+
+                      <p :if={@uploads.package_files.entries != [] and not has_xml_file?(@uploads.package_files.entries)} class="text-xs text-warning text-center">
+                        Please include at least one XML metadata file
+                      </p>
+                    </form>
+                  </div>
 
                   <div class="divider text-xs">OR USE A SAMPLE</div>
 
+                  <p class="text-xs text-base-content/40 mb-2">Basic fixtures</p>
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <button phx-click="use_sample" phx-value-version="ern382" class="btn btn-outline btn-secondary">
+                    <button phx-click="use_sample" phx-value-version="ern382" class="btn btn-outline btn-secondary btn-sm">
                       <.icon name="hero-beaker" class="size-4" />
                       <span class="flex flex-col items-start leading-tight">
                         <span class="text-xs font-normal opacity-70">ERN 3.8.2</span>
                         <span>Album &middot; 10 tracks</span>
                       </span>
                     </button>
-                    <button phx-click="use_sample" phx-value-version="ern43" class="btn btn-outline btn-accent">
+                    <button phx-click="use_sample" phx-value-version="ern43" class="btn btn-outline btn-accent btn-sm">
                       <.icon name="hero-beaker" class="size-4" />
                       <span class="flex flex-col items-start leading-tight">
                         <span class="text-xs font-normal opacity-70">ERN 4.3</span>
                         <span>Single &middot; 2 tracks</span>
+                      </span>
+                    </button>
+                  </div>
+
+                  <p class="text-xs text-base-content/40 mt-4 mb-2">Full delivery packages</p>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <button phx-click="use_sample" phx-value-version="glass_garden" class="btn btn-outline btn-primary btn-sm">
+                      <.icon name="hero-musical-note" class="size-4" />
+                      <span class="flex flex-col items-start leading-tight">
+                        <span class="text-xs font-normal opacity-70">ERN 4.3</span>
+                        <span>Album &middot; 8 tracks</span>
+                      </span>
+                    </button>
+                    <button phx-click="use_sample" phx-value-version="copper_sun" class="btn btn-outline btn-secondary btn-sm">
+                      <.icon name="hero-musical-note" class="size-4" />
+                      <span class="flex flex-col items-start leading-tight">
+                        <span class="text-xs font-normal opacity-70">ERN 3.8.2</span>
+                        <span>Single &middot; 2 tracks</span>
+                      </span>
+                    </button>
+                    <button phx-click="use_sample" phx-value-version="night_market" class="btn btn-outline btn-accent btn-sm">
+                      <.icon name="hero-musical-note" class="size-4" />
+                      <span class="flex flex-col items-start leading-tight">
+                        <span class="text-xs font-normal opacity-70">ERN 4.3</span>
+                        <span>EP &middot; 5 tracks</span>
                       </span>
                     </button>
                   </div>
@@ -258,10 +420,20 @@ defmodule DdexDeliveryServiceWeb.DemoLive do
                     <.icon name="hero-document" class="size-4" />
                     {@delivery.original_filename}
                   </div>
-                  <button :if={!@processing} phx-click="reset" class="btn btn-ghost btn-sm mt-3">
-                    <.icon name="hero-arrow-path" class="size-4" />
-                    Start over
-                  </button>
+                  <div :if={!@processing} class="flex items-center justify-center gap-2 mt-3">
+                    <.link
+                      :if={@release}
+                      href={~p"/demo/csv/#{@delivery.id}"}
+                      class="btn btn-outline btn-primary btn-sm"
+                    >
+                      <.icon name="hero-arrow-down-tray" class="size-4" />
+                      Download CSV
+                    </.link>
+                    <button phx-click="reset" class="btn btn-ghost btn-sm">
+                      <.icon name="hero-arrow-path" class="size-4" />
+                      Start over
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -310,6 +482,9 @@ defmodule DdexDeliveryServiceWeb.DemoLive do
                         <span class="badge badge-primary">{format_release_type(@release.release_type)}</span>
                         <span :if={@delivery && @delivery.ern_version} class="badge badge-outline badge-sm">
                           ERN {@delivery.ern_version}
+                        </span>
+                        <span :if={@delivery && @delivery.source == :sftp} class="badge badge-secondary badge-sm">
+                          SFTP
                         </span>
                       </div>
                       <h2 class="card-title text-xl">{@release.title}</h2>
@@ -363,6 +538,14 @@ defmodule DdexDeliveryServiceWeb.DemoLive do
                   phx-value-tab="graphql"
                 >
                   GraphQL
+                </button>
+                <button
+                  role="tab"
+                  class={["tab", @current_tab == "csv" && "tab-active"]}
+                  phx-click="switch_tab"
+                  phx-value-tab="csv"
+                >
+                  CSV
                 </button>
               </div>
 
@@ -431,6 +614,37 @@ defmodule DdexDeliveryServiceWeb.DemoLive do
                 </div>
               </div>
 
+              <%!-- Tab: CSV --%>
+              <div :if={@current_tab == "csv"} class="space-y-4">
+                <div class="card bg-base-100 shadow-md">
+                  <div class="card-body">
+                    <p class="text-sm text-base-content/60 mb-1">
+                      Export delivery data as CSV for spreadsheet tools or downstream systems.
+                    </p>
+                    <div class="mockup-code text-xs">
+                      <pre data-prefix="$"><code>curl {DdexDeliveryServiceWeb.Endpoint.url()}/api/csv/deliveries/{@delivery.id}/tracks -H "Authorization: Bearer dds_..."</code></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-base-100 shadow-md">
+                  <div class="card-body">
+                    <div class="flex items-center justify-between mb-2">
+                      <h3 class="font-semibold text-sm">Download</h3>
+                      <span class="badge badge-outline badge-xs">text/csv</span>
+                    </div>
+                    <div class="flex gap-3">
+                      <.link
+                        href={~p"/demo/csv/#{@delivery.id}"}
+                        class="btn btn-primary btn-sm"
+                      >
+                        <.icon name="hero-arrow-down-tray" class="size-4" />
+                        Tracks CSV
+                      </.link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <%!-- API messaging --%>
               <div class="text-center py-4">
                 <p class="text-sm text-base-content/40">
@@ -476,6 +690,47 @@ defmodule DdexDeliveryServiceWeb.DemoLive do
   defp format_release_type(:ep), do: "EP"
   defp format_release_type(:compilation), do: "Compilation"
   defp format_release_type(_), do: "Release"
+
+  defp file_type_icon(filename) do
+    cond do
+      String.ends_with?(filename, ".xml") -> "hero-document-text"
+      audio_file?(filename) -> "hero-musical-note"
+      image_file?(filename) -> "hero-photo"
+      true -> "hero-document"
+    end
+  end
+
+  defp file_type_color(filename) do
+    cond do
+      String.ends_with?(filename, ".xml") -> "text-primary"
+      audio_file?(filename) -> "text-secondary"
+      image_file?(filename) -> "text-accent"
+      true -> "text-base-content/50"
+    end
+  end
+
+  defp file_type_label(filename) do
+    cond do
+      String.ends_with?(filename, ".xml") -> "XML"
+      audio_file?(filename) -> "Audio"
+      image_file?(filename) -> "Artwork"
+      true -> "File"
+    end
+  end
+
+  defp audio_file?(filename) do
+    ext = Path.extname(filename) |> String.downcase()
+    ext in ~w(.flac .wav .mp3 .aac .ogg)
+  end
+
+  defp image_file?(filename) do
+    ext = Path.extname(filename) |> String.downcase()
+    ext in ~w(.jpg .jpeg .png .tiff .tif)
+  end
+
+  defp has_xml_file?(entries) do
+    Enum.any?(entries, fn entry -> String.ends_with?(entry.client_name, ".xml") end)
+  end
 
   defp json_api_example(release, tracks) do
     artists =

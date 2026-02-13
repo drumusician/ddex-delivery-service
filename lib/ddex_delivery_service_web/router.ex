@@ -38,6 +38,21 @@ defmodule DdexDeliveryServiceWeb.Router do
     plug DdexDeliveryServiceWeb.Plugs.SetTenant
   end
 
+  # CSV API routes (authenticated via API key or bearer token)
+  scope "/api/csv", DdexDeliveryServiceWeb do
+    pipe_through [:api]
+
+    get "/deliveries/:delivery_id/tracks", CsvController, :tracks
+    get "/deliveries/:delivery_id/releases", CsvController, :releases
+  end
+
+  # Demo CSV (no auth)
+  scope "/demo", DdexDeliveryServiceWeb do
+    pipe_through :browser
+
+    get "/csv/:delivery_id", DemoCsvController, :tracks
+  end
+
   # Public routes (no auth required)
   scope "/", DdexDeliveryServiceWeb do
     pipe_through :browser

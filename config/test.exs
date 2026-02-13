@@ -1,4 +1,7 @@
 import Config
+# Disable SFTP server in tests
+config :ddex_delivery_service, :sftp, enabled: false
+
 config :ddex_delivery_service, Oban, testing: :manual
 config :ddex_delivery_service, token_signing_secret: "zd1kh+OY1OOiSImogUdP7QJ7f0cg2KJ5"
 config :bcrypt_elixir, log_rounds: 1
