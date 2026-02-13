@@ -8,6 +8,10 @@ defmodule DdexDeliveryService.Repo.Migrations.AddOrganizationsAndMultitenancy do
   use Ecto.Migration
 
   def up do
+    # Clear pre-existing data that lacks organization_id
+    # (demo/test data from before multi-tenancy was added)
+    execute "TRUNCATE validation_results, track_artists, territory_releases, release_artists, deals, tracks, releases, labels, deliveries CASCADE"
+
     drop constraint(:validation_results, "validation_results_delivery_id_fkey")
 
     alter table(:validation_results) do
