@@ -1,0 +1,67 @@
+defmodule DdexDeliveryService.Accounts.Organization do
+  use Ash.Resource,
+    otp_app: :ddex_delivery_service,
+    domain: DdexDeliveryService.Accounts,
+    data_layer: AshPostgres.DataLayer,
+    authorizers: [Ash.Policy.Authorizer]
+
+  postgres do
+    table "organizations"
+    repo DdexDeliveryService.Repo
+  end
+
+  actions do
+    defaults [:read, :destroy]
+
+    create :create do
+      accept [:name, :slug, :ddex_party_id, :status]
+    end
+
+    update :update do
+      accept [:name, :ddex_party_id, :status]
+    end
+  end
+
+  policies do
+    bypass DdexDeliveryService.Checks.IsSystemActor do
+      authorize_if always()
+    end
+
+    policy always() do
+      authorize_if actor_present()
+    end
+  end
+
+  attributes do
+    uuid_primary_key :id
+
+    attribute :name, :string do
+      allow_nil? false
+      public? true
+    end
+
+    attribute :slug, :string do
+      allow_nil? false
+      public? true
+    end
+
+    attribute :ddex_party_id, :string, public?: true
+
+    attribute :status, :atom do
+      constraints one_of: [:active, :suspended, :trial]
+      default :trial
+      public? true
+    end
+
+    create_timestamp :inserted_at
+    update_timestamp :updated_at
+  end
+
+  relationships do
+    has_many :memberships, DdexDeliveryService.Accounts.Membership
+  end
+
+  identities do
+    identity :unique_slug, [:slug]
+  end
+end

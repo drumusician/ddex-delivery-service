@@ -10,12 +10,21 @@ defmodule DdexDeliveryService.Application do
     children = [
       DdexDeliveryServiceWeb.Telemetry,
       DdexDeliveryService.Repo,
-      {DNSCluster, query: Application.get_env(:ddex_delivery_service, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:ddex_delivery_service, :dns_cluster_query) || :ignore},
+      {Oban,
+       AshOban.config(
+         Application.fetch_env!(:ddex_delivery_service, :ash_domains),
+         Application.fetch_env!(:ddex_delivery_service, Oban)
+       )},
       {Phoenix.PubSub, name: DdexDeliveryService.PubSub},
       # Start a worker by calling: DdexDeliveryService.Worker.start_link(arg)
       # {DdexDeliveryService.Worker, arg},
       # Start to serve requests, typically the last entry
-      DdexDeliveryServiceWeb.Endpoint
+      DdexDeliveryServiceWeb.Endpoint,
+      {Absinthe.Subscription, DdexDeliveryServiceWeb.Endpoint},
+      AshGraphql.Subscription.Batcher,
+      {AshAuthentication.Supervisor, [otp_app: :ddex_delivery_service]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

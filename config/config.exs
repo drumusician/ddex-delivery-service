@@ -7,9 +7,83 @@
 # General application configuration
 import Config
 
+config :ash_oban, pro?: false
+
+config :ddex_delivery_service, Oban,
+  engine: Oban.Engines.Basic,
+  notifier: Oban.Notifiers.Postgres,
+  queues: [default: 10],
+  repo: DdexDeliveryService.Repo,
+  plugins: [{Oban.Plugins.Cron, []}]
+
+config :mime,
+  extensions: %{"json" => "application/vnd.api+json"},
+  types: %{"application/vnd.api+json" => ["json"]}
+
+config :ash_json_api,
+  show_public_calculations_when_loaded?: false,
+  authorize_update_destroy_with_error?: true
+
+config :ash_graphql, authorize_update_destroy_with_error?: true
+
+config :ash,
+  allow_forbidden_field_for_relationships_by_default?: true,
+  include_embedded_source_by_default?: false,
+  show_keysets_for_all_actions?: false,
+  default_page_type: :keyset,
+  policies: [no_filter_static_forbidden_reads?: false],
+  keep_read_action_loads_when_loading?: false,
+  default_actions_require_atomic?: true,
+  read_action_after_action_hooks_in_order?: true,
+  bulk_actions_default_to_errors?: true,
+  transaction_rollback_on_error?: true,
+  known_types: [AshPostgres.Timestamptz, AshPostgres.TimestamptzUsec]
+
+config :spark,
+  formatter: [
+    remove_parens?: true,
+    "Ash.Resource": [
+      section_order: [
+        :authentication,
+        :token,
+        :user_identity,
+        :postgres,
+        :json_api,
+        :graphql,
+        :resource,
+        :code_interface,
+        :actions,
+        :policies,
+        :pub_sub,
+        :preparations,
+        :changes,
+        :validations,
+        :multitenancy,
+        :attributes,
+        :relationships,
+        :calculations,
+        :aggregates,
+        :identities
+      ]
+    ],
+    "Ash.Domain": [
+      section_order: [
+        :json_api,
+        :graphql,
+        :resources,
+        :policies,
+        :authorization,
+        :domain,
+        :execution
+      ]
+    ]
+  ]
+
 config :ddex_delivery_service,
   ecto_repos: [DdexDeliveryService.Repo],
-  generators: [timestamp_type: :utc_datetime]
+  generators: [timestamp_type: :utc_datetime],
+  ash_domains: [DdexDeliveryService.Accounts, DdexDeliveryService.Catalog, DdexDeliveryService.Ingestion],
+  ash_authentication: [return_error_on_invalid_magic_link_token?: true]
 
 # Configure the endpoint
 config :ddex_delivery_service, DdexDeliveryServiceWeb.Endpoint,
@@ -21,6 +95,21 @@ config :ddex_delivery_service, DdexDeliveryServiceWeb.Endpoint,
   ],
   pubsub_server: DdexDeliveryService.PubSub,
   live_view: [signing_salt: "WN7Xck6V"]
+
+# Configure file storage (S3-compatible, e.g. Tigris)
+config :ddex_delivery_service,
+  storage_bucket: System.get_env("STORAGE_BUCKET", "ddex-deliveries")
+
+config :ex_aws,
+  json_codec: Jason,
+  access_key_id: [{:system, "AWS_ACCESS_KEY_ID"}, :instance_role],
+  secret_access_key: [{:system, "AWS_SECRET_ACCESS_KEY"}, :instance_role],
+  region: System.get_env("AWS_REGION", "auto")
+
+config :ex_aws, :s3,
+  scheme: "https://",
+  host: System.get_env("AWS_S3_HOST"),
+  port: 443
 
 # Configure the mailer
 #

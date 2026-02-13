@@ -59,6 +59,10 @@ if config_env() == :prod do
 
   config :ddex_delivery_service, DdexDeliveryServiceWeb.Endpoint,
     url: [host: host, port: 443, scheme: "https"],
+    check_origin: [
+      "https://#{host}",
+      "https://ddex-delivery-service.fly.dev"
+    ],
     http: [
       # Enable IPv6 and bind on all interfaces.
       # Set it to  {0, 0, 0, 0, 0, 0, 0, 1} for local network only access.
@@ -67,6 +71,11 @@ if config_env() == :prod do
       ip: {0, 0, 0, 0, 0, 0, 0, 0}
     ],
     secret_key_base: secret_key_base
+
+  config :ddex_delivery_service,
+    token_signing_secret:
+      System.get_env("TOKEN_SIGNING_SECRET") ||
+        raise("Missing environment variable `TOKEN_SIGNING_SECRET`!")
 
   # ## SSL Support
   #

@@ -36,7 +36,9 @@ defmodule DdexDeliveryService.DataCase do
   Sets up the sandbox based on the test tags.
   """
   def setup_sandbox(tags) do
-    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(DdexDeliveryService.Repo, shared: not tags[:async])
+    pid =
+      Ecto.Adapters.SQL.Sandbox.start_owner!(DdexDeliveryService.Repo, shared: not tags[:async])
+
     on_exit(fn -> Ecto.Adapters.SQL.Sandbox.stop_owner(pid) end)
   end
 
@@ -54,5 +56,21 @@ defmodule DdexDeliveryService.DataCase do
         opts |> Keyword.get(String.to_existing_atom(key), key) |> to_string()
       end)
     end)
+  end
+
+  @doc """
+  Creates a test organization and returns its ID (as a string).
+  """
+  def create_test_org!(slug \\ nil) do
+    slug = slug || "test-org-#{System.unique_integer([:positive])}"
+    actor = %DdexDeliveryService.Accounts.SystemActor{}
+
+    {:ok, org} =
+      DdexDeliveryService.Accounts.create_organization(
+        %{name: "Test Organization", slug: slug},
+        actor: actor
+      )
+
+    org
   end
 end

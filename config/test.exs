@@ -1,4 +1,19 @@
 import Config
+config :ddex_delivery_service, Oban, testing: :manual
+config :ddex_delivery_service, token_signing_secret: "zd1kh+OY1OOiSImogUdP7QJ7f0cg2KJ5"
+config :bcrypt_elixir, log_rounds: 1
+config :ash, policies: [show_policy_breakdowns?: true], disable_async?: true
+
+# Fake S3 credentials for test (no actual S3 calls are made)
+config :ex_aws,
+  access_key_id: "test-key-id",
+  secret_access_key: "test-secret-key",
+  region: "us-east-1"
+
+config :ex_aws, :s3,
+  scheme: "https://",
+  host: "s3.test.example.com",
+  port: 443
 
 # Configure your database
 #

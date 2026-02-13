@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ern:NewReleaseMessage xmlns:ern="http://ddex.net/xml/ern/43" MessageSchemaVersionId="ern/43">
+  <MessageHeader>
+    <MessageThreadId>MSG-2025-042</MessageThreadId>
+    <MessageId>MSG-2025-042-001</MessageId>
+    <MessageSender>
+      <PartyId>PADPIDA2025020201X</PartyId>
+      <PartyName>
+        <FullName>Stellar Distribution Co</FullName>
+      </PartyName>
+    </MessageSender>
+    <MessageRecipient>
+      <PartyId>PADPIDA2024010102B</PartyId>
+      <PartyName>
+        <FullName>DDEX Delivery Service</FullName>
+      </PartyName>
+    </MessageRecipient>
+    <MessageCreatedDateTime>2025-01-20T14:00:00Z</MessageCreatedDateTime>
+  </MessageHeader>
+
+  <PartyList>
+    <Party>
+      <PartyReference>P1</PartyReference>
+      <PartyName>
+        <FullName>Luma Vasquez</FullName>
+      </PartyName>
+      <PartyId>
+        <ISNI>0000000512345678</ISNI>
+      </PartyId>
+    </Party>
+    <Party>
+      <PartyReference>P2</PartyReference>
+      <PartyName>
+        <FullName>Kael Torres</FullName>
+      </PartyName>
+      <PartyId>
+        <DPID>PADPIDA2025030301Z</DPID>
+      </PartyId>
+    </Party>
+    <Party>
+      <PartyReference>P3</PartyReference>
+      <PartyName>
+        <FullName>Moonfield Records</FullName>
+      </PartyName>
+      <PartyId>
+        <DPID>PADPIDA2025010101M</DPID>
+      </PartyId>
+    </Party>
+  </PartyList>
+
+  <ResourceList>
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>USA402500101</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A1</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Tangerine Skies</TitleText>
+      </ReferenceTitle>
+      <Duration>PT3M22S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Luma Vasquez</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Luma Vasquez</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Moonfield Records</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Moonfield Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Pop</GenreText>
+          <SubGenre>Indie Pop</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>USA402500102</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A2</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Tangerine Skies (Kael Torres Remix)</TitleText>
+      </ReferenceTitle>
+      <Duration>PT4M05S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Luma Vasquez &amp; Kael Torres</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Luma Vasquez</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Kael Torres</FullName>
+          </PartyName>
+          <ArtistRole>Remixer</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Moonfield Records</LabelName>
+        <PLine>
+          <Year>2025</Year>
+          <PLineText>2025 Moonfield Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>House</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <Image>
+      <ImageType>FrontCoverImage</ImageType>
+      <ImageId>
+        <ProprietaryId Namespace="PADPIDA2025020201X">IMG042</ProprietaryId>
+      </ImageId>
+      <ResourceReference>A3</ResourceReference>
+    </Image>
+  </ResourceList>
+
+  <ReleaseList>
+    <Release IsMainRelease="true">
+      <ReleaseId>
+        <ICPN>0196118275463</ICPN>
+      </ReleaseId>
+      <ReleaseReference>R0</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Tangerine Skies</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A1</ReleaseResourceReference>
+        <ReleaseResourceReference>A2</ReleaseResourceReference>
+        <ReleaseResourceReference>A3</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>Single</ReleaseType>
+      <ReleaseDate>2025-03-14</ReleaseDate>
+      <Duration>PT7M27S</Duration>
+      <PLine>
+        <Year>2025</Year>
+        <PLineText>2025 Moonfield Records</PLineText>
+      </PLine>
+      <CLine>
+        <Year>2025</Year>
+        <CLineText>2025 Moonfield Records</CLineText>
+      </CLine>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Luma Vasquez</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Luma Vasquez</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Moonfield Records</LabelName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Tangerine Skies</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Pop</GenreText>
+          <SubGenre>Indie Pop</SubGenre>
+        </Genre>
+        <ParentalWarningType>NotExplicit</ParentalWarningType>
+        <LanguageAndScriptCode>en</LanguageAndScriptCode>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>USA402500101</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R1</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Tangerine Skies</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A1</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Luma Vasquez</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Tangerine Skies</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Pop</GenreText>
+          <SubGenre>Indie Pop</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>USA402500102</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R2</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Tangerine Skies (Kael Torres Remix)</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A2</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Luma Vasquez &amp; Kael Torres</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Tangerine Skies (Kael Torres Remix)</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>House</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+  </ReleaseList>
+
+  <DealList>
+    <ReleaseDeal>
+      <DealReleaseReference>R0</DealReleaseReference>
+      <Deal>
+        <DealTerms>
+          <CommercialModelType>SubscriptionModel</CommercialModelType>
+          <Usage>
+            <UseType>OnDemandStream</UseType>
+          </Usage>
+          <TerritoryCode>Worldwide</TerritoryCode>
+          <ValidityPeriod>
+            <StartDate>2025-03-14</StartDate>
+          </ValidityPeriod>
+        </DealTerms>
+      </Deal>
+    </ReleaseDeal>
+  </DealList>
+</ern:NewReleaseMessage>

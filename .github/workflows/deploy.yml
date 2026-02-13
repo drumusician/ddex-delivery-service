@@ -1,0 +1,64 @@
+name: Deploy (Depot)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-deploy:
+    name: Build with Depot and Deploy to Fly
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Depot
+      uses: depot/setup-action@v1
+
+    - name: Login to Fly Registry
+      uses: depot/login-action@v1
+      with:
+        registry: registry.fly.io
+        username: x
+        password: ${{ secrets.FLY_API_TOKEN }}
+
+    - name: Build and push image with Depot
+      uses: depot/build-push-action@v1
+      with:
+        context: .
+        push: true
+        platforms: linux/amd64
+        tags: |
+          registry.fly.io/ddex-delivery-service:${{ github.sha }}
+          registry.fly.io/ddex-delivery-service:latest
+        project: ${{ secrets.DEPOT_PROJECT_ID }}
+        cache-from: type=registry,ref=registry.fly.io/ddex-delivery-service:buildcache
+        cache-to: type=registry,ref=registry.fly.io/ddex-delivery-service:buildcache,mode=max
+        build-args: |
+          MIX_ENV=prod
+
+    - name: Setup Fly.io CLI
+      uses: superfly/flyctl-actions/setup-flyctl@master
+
+    - name: Deploy to Fly.io
+      run: |
+        flyctl deploy \
+          --config fly.toml \
+          --image registry.fly.io/ddex-delivery-service:${{ github.sha }} \
+          --strategy immediate
+      env:
+        FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
+    - name: Run health check
+      run: |
+        echo "Waiting for deployment to settle..."
+        sleep 30
+        curl -f https://dds.smart-code.nl/health || curl -f https://ddex-delivery-service.fly.dev/health || exit 1
+        echo "Health check passed!"

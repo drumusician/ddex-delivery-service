@@ -1,4 +1,5 @@
 import Config
+config :ash, policies: [show_policy_breakdowns?: true]
 
 # Configure your database
 config :ddex_delivery_service, DdexDeliveryService.Repo,
@@ -69,7 +70,9 @@ config :ddex_delivery_service, DdexDeliveryServiceWeb.Endpoint,
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :ddex_delivery_service, dev_routes: true
+config :ddex_delivery_service,
+  dev_routes: true,
+  token_signing_secret: "WVr3wa1CBDsSaO0hOm2c5hvA0cmX4rXY"
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :default_formatter, format: "[$level] $message\n"

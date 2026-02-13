@@ -1,5 +1,6 @@
 defmodule DdexDeliveryServiceWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :ddex_delivery_service
+  use Absinthe.Phoenix.Endpoint
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
@@ -15,6 +16,8 @@ defmodule DdexDeliveryServiceWeb.Endpoint do
     websocket: [connect_info: [session: @session_options]],
     longpoll: [connect_info: [session: @session_options]]
 
+  socket "/ws/gql", DdexDeliveryServiceWeb.GraphqlSocket, websocket: true, longpoll: true
+
   # Serve at "/" the static files from "priv/static" directory.
   #
   # When code reloading is disabled (e.g., in production),
@@ -27,12 +30,17 @@ defmodule DdexDeliveryServiceWeb.Endpoint do
     only: DdexDeliveryServiceWeb.static_paths(),
     raise_on_missing_only: code_reloading?
 
+  if Code.ensure_loaded?(Tidewave) do
+    plug Tidewave
+  end
+
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
+    plug AshPhoenix.Plug.CheckCodegenStatus
     plug Phoenix.Ecto.CheckRepoStatus, otp_app: :ddex_delivery_service
   end
 
@@ -44,7 +52,7 @@ defmodule DdexDeliveryServiceWeb.Endpoint do
   plug Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
 
   plug Plug.Parsers,
-    parsers: [:urlencoded, :multipart, :json],
+    parsers: [:urlencoded, :multipart, :json, Absinthe.Plug.Parser, AshJsonApi.Plug.Parser],
     pass: ["*/*"],
     json_decoder: Phoenix.json_library()
 

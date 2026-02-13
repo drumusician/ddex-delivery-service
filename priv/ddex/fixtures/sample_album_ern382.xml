@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ern:NewReleaseMessage xmlns:ern="http://ddex.net/xml/ern/382" MessageSchemaVersionId="ern/382">
+  <MessageHeader>
+    <MessageThreadId>MSG-2024-001</MessageThreadId>
+    <MessageId>MSG-2024-001-001</MessageId>
+    <MessageSender>
+      <PartyId>PADPIDA2024010101A</PartyId>
+      <PartyName>
+        <FullName>Demo Music Distribution</FullName>
+      </PartyName>
+    </MessageSender>
+    <MessageRecipient>
+      <PartyId>PADPIDA2024010102B</PartyId>
+      <PartyName>
+        <FullName>DDEX Delivery Service</FullName>
+      </PartyName>
+    </MessageRecipient>
+    <MessageCreatedDateTime>2024-06-15T10:30:00Z</MessageCreatedDateTime>
+  </MessageHeader>
+
+  <ResourceList>
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>NLA401234501</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A1</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Midnight Signal</TitleText>
+      </ReferenceTitle>
+      <Duration>PT4M12S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Midnight Signal</TitleText>
+        </Title>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Aurora Waves</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Neon Harbor Records</LabelName>
+        <PLine>
+          <Year>2024</Year>
+          <PLineText>2024 Neon Harbor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>NLA401234502</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A2</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Neon Drift</TitleText>
+      </ReferenceTitle>
+      <Duration>PT3M48S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Neon Drift</TitleText>
+        </Title>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Aurora Waves</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Neon Harbor Records</LabelName>
+        <PLine>
+          <Year>2024</Year>
+          <PLineText>2024 Neon Harbor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>NLA401234503</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A3</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Chrome Horizon</TitleText>
+      </ReferenceTitle>
+      <Duration>PT5M01S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Chrome Horizon</TitleText>
+        </Title>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Aurora Waves</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Neon Harbor Records</LabelName>
+        <PLine>
+          <Year>2024</Year>
+          <PLineText>2024 Neon Harbor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>NLA401234504</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A4</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Digital Rain</TitleText>
+      </ReferenceTitle>
+      <Duration>PT3M33S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Digital Rain</TitleText>
+        </Title>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Aurora Waves</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Neon Harbor Records</LabelName>
+        <PLine>
+          <Year>2024</Year>
+          <PLineText>2024 Neon Harbor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Downtempo</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>NLA401234505</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A5</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Vapor City</TitleText>
+      </ReferenceTitle>
+      <Duration>PT4M27S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Vapor City</TitleText>
+        </Title>
+        <DisplayArtistName>Aurora Waves feat. Echo Module</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Aurora Waves</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Echo Module</FullName>
+          </PartyName>
+          <ArtistRole>FeaturedArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Neon Harbor Records</LabelName>
+        <PLine>
+          <Year>2024</Year>
+          <PLineText>2024 Neon Harbor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>NLA401234506</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A6</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Retrograde</TitleText>
+      </ReferenceTitle>
+      <Duration>PT6M15S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Retrograde</TitleText>
+        </Title>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Aurora Waves</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Neon Harbor Records</LabelName>
+        <PLine>
+          <Year>2024</Year>
+          <PLineText>2024 Neon Harbor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Ambient</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>NLA401234507</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A7</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Pulse Network</TitleText>
+      </ReferenceTitle>
+      <Duration>PT4M02S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Pulse Network</TitleText>
+        </Title>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Aurora Waves</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Neon Harbor Records</LabelName>
+        <PLine>
+          <Year>2024</Year>
+          <PLineText>2024 Neon Harbor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>NLA401234508</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A8</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Ghost Frequency</TitleText>
+      </ReferenceTitle>
+      <Duration>PT3M56S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Ghost Frequency</TitleText>
+        </Title>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Aurora Waves</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Neon Harbor Records</LabelName>
+        <PLine>
+          <Year>2024</Year>
+          <PLineText>2024 Neon Harbor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>NLA401234509</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A9</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Solar Flare</TitleText>
+      </ReferenceTitle>
+      <Duration>PT4M44S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Solar Flare</TitleText>
+        </Title>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Aurora Waves</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Neon Harbor Records</LabelName>
+        <PLine>
+          <Year>2024</Year>
+          <PLineText>2024 Neon Harbor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <SoundRecording>
+      <SoundRecordingType>MusicalWorkSoundRecording</SoundRecordingType>
+      <SoundRecordingId>
+        <ISRC>NLA401234510</ISRC>
+      </SoundRecordingId>
+      <ResourceReference>A10</ResourceReference>
+      <ReferenceTitle>
+        <TitleText>Event Horizon</TitleText>
+      </ReferenceTitle>
+      <Duration>PT7M30S</Duration>
+      <SoundRecordingDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <Title TitleType="FormalTitle">
+          <TitleText>Event Horizon</TitleText>
+        </Title>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Aurora Waves</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Neon Harbor Records</LabelName>
+        <PLine>
+          <Year>2024</Year>
+          <PLineText>2024 Neon Harbor Records</PLineText>
+        </PLine>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Ambient</SubGenre>
+        </Genre>
+      </SoundRecordingDetailsByTerritory>
+    </SoundRecording>
+
+    <Image>
+      <ImageType>FrontCoverImage</ImageType>
+      <ImageId>
+        <ProprietaryId Namespace="PADPIDA2024010101A">IMG001</ProprietaryId>
+      </ImageId>
+      <ResourceReference>A11</ResourceReference>
+      <ImageDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+      </ImageDetailsByTerritory>
+    </Image>
+  </ResourceList>
+
+  <ReleaseList>
+    <Release IsMainRelease="true">
+      <ReleaseId>
+        <ICPN>5400123456789</ICPN>
+      </ReleaseId>
+      <ReleaseReference>R0</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Signals from the Deep</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A1</ReleaseResourceReference>
+        <ReleaseResourceReference>A2</ReleaseResourceReference>
+        <ReleaseResourceReference>A3</ReleaseResourceReference>
+        <ReleaseResourceReference>A4</ReleaseResourceReference>
+        <ReleaseResourceReference>A5</ReleaseResourceReference>
+        <ReleaseResourceReference>A6</ReleaseResourceReference>
+        <ReleaseResourceReference>A7</ReleaseResourceReference>
+        <ReleaseResourceReference>A8</ReleaseResourceReference>
+        <ReleaseResourceReference>A9</ReleaseResourceReference>
+        <ReleaseResourceReference>A10</ReleaseResourceReference>
+        <ReleaseResourceReference>A11</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>Album</ReleaseType>
+      <ReleaseDate>2024-09-15</ReleaseDate>
+      <Duration>PT47M28S</Duration>
+      <PLine>
+        <Year>2024</Year>
+        <PLineText>2024 Neon Harbor Records</PLineText>
+      </PLine>
+      <CLine>
+        <Year>2024</Year>
+        <CLineText>2024 Neon Harbor Records</CLineText>
+      </CLine>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <DisplayArtist>
+          <PartyName>
+            <FullName>Aurora Waves</FullName>
+          </PartyName>
+          <ArtistRole>MainArtist</ArtistRole>
+        </DisplayArtist>
+        <LabelName>Neon Harbor Records</LabelName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Signals from the Deep</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+        <ParentalWarningType>NotExplicit</ParentalWarningType>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>NLA401234501</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R1</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Midnight Signal</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A1</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Midnight Signal</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>NLA401234502</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R2</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Neon Drift</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A2</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Neon Drift</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>NLA401234503</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R3</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Chrome Horizon</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A3</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Chrome Horizon</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>NLA401234504</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R4</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Digital Rain</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A4</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Digital Rain</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Downtempo</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>NLA401234505</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R5</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Vapor City</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A5</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Aurora Waves feat. Echo Module</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Vapor City</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>NLA401234506</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R6</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Retrograde</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A6</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Retrograde</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Ambient</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>NLA401234507</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R7</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Pulse Network</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A7</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Pulse Network</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>NLA401234508</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R8</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Ghost Frequency</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A8</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Ghost Frequency</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>NLA401234509</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R9</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Solar Flare</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A9</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Solar Flare</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Synthwave</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+
+    <Release>
+      <ReleaseId>
+        <ISRC>NLA401234510</ISRC>
+      </ReleaseId>
+      <ReleaseReference>R10</ReleaseReference>
+      <ReferenceTitle>
+        <TitleText>Event Horizon</TitleText>
+      </ReferenceTitle>
+      <ReleaseResourceReferenceList>
+        <ReleaseResourceReference>A10</ReleaseResourceReference>
+      </ReleaseResourceReferenceList>
+      <ReleaseType>TrackRelease</ReleaseType>
+      <ReleaseDetailsByTerritory>
+        <TerritoryCode>Worldwide</TerritoryCode>
+        <DisplayArtistName>Aurora Waves</DisplayArtistName>
+        <Title TitleType="FormalTitle">
+          <TitleText>Event Horizon</TitleText>
+        </Title>
+        <Genre>
+          <GenreText>Electronic</GenreText>
+          <SubGenre>Ambient</SubGenre>
+        </Genre>
+      </ReleaseDetailsByTerritory>
+    </Release>
+  </ReleaseList>
+
+  <DealList>
+    <ReleaseDeal>
+      <DealReleaseReference>R0</DealReleaseReference>
+      <Deal>
+        <DealTerms>
+          <CommercialModelType>PayAsYouGoModel</CommercialModelType>
+          <Usage>
+            <UseType>OnDemandStream</UseType>
+          </Usage>
+          <Usage>
+            <UseType>PermanentDownload</UseType>
+          </Usage>
+          <TerritoryCode>Worldwide</TerritoryCode>
+          <ValidityPeriod>
+            <StartDate>2024-09-15</StartDate>
+          </ValidityPeriod>
+        </DealTerms>
+      </Deal>
+    </ReleaseDeal>
+  </DealList>
+</ern:NewReleaseMessage>
